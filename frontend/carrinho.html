@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100 flex flex-col min-h-screen">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold">E-commerce</a>
+            <div class="relative">
+                <button id="cart-button" class="relative focus:outline-none">
+                    <i class="fas fa-shopping-cart text-gray-700 text-2xl"></i>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-red-600 text-white rounded-full text-xs px-1">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cart Items -->
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-2xl font-semibold mb-4">Carrinho de Compras</h1>
+        <div class="grid grid-cols-1 gap-4">
+            <!-- Sample Product -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                <div class="p-4 flex items-center justify-between">
+                    <div class="flex items-center">
+                        <img src="https://via.placeholder.com/100" alt="Product Image" class="w-16 h-16 object-cover mr-4">
+                        <div>
+                            <h3 class="text-lg font-semibold">Nome do Produto</h3>
+                            <p class="text-gray-600">Descrição do produto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p class="text-gray-700 font-bold">Preço: R$ 50.00</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="number" min="1" class="w-16 h-10 px-2 border rounded-lg mr-2" value="1">
+                        <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Remover</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat this block for more products -->
+        </div>
+        <!-- Total -->
+        <div class="mt-8 text-right">
+            <p class="text-xl font-semibold">Total: R$ <span id="total">50.00</span></p>
+        </div>
+        <!-- Checkout and Continue Shopping Buttons -->
+        <div class="mt-8 flex justify-between">
+            <a href="index.html"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Continuar Comprando</button></a>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-4 mt-auto">
+        <div class="container mx-auto text-center">
+            &copy; 2024 E-commerce. All rights reserved.
+        </div>
+    </footer>
+<script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+.fixed-card-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.fixed-height-description {
+  height: 80px; /* Ajuste a altura conforme necessário */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
